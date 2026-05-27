@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "18490494111",
+    "project_id": "bloomix-mobile-app",
+    "storage_bucket": "bloomix-mobile-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18490494111:android:9bb1c40e10c3f962bbe6aa",
+        "android_client_info": {
+          "package_name": "com.example.bloomix_mobile_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwcpK5frhZsF6sZ_XGf63TJXbwO_eoh7c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
