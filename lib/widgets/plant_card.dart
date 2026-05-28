@@ -87,24 +87,22 @@ class PlantCard extends StatelessWidget {
                 const SizedBox(height: 10),
                 Row(
                   children: [
-                    const Icon(
+                    Icon(
                       Icons.water_drop_outlined,
                       size: 18,
-                      color: Colors.red,
+                      color: overdueDays < 0 ? Colors.red : Colors.blue,
                     ),
 
                     const SizedBox(width: 8),
 
                     Text(
-                      overdueDays > 0
-                          ? 'Overdue by $overdueDays days'
-                          : 'Watered on time',
+                      overdueDays < 0
+                          ? 'Overdue by ${overdueDays.abs()} days'
+                          : 'Water due in $overdueDays days',
 
                       style: TextStyle(
                         fontSize: 15,
-                        color: overdueDays > 0
-                            ? Colors.red
-                            : AppColors.primaryGreen,
+                        color: overdueDays < 0 ? Colors.red : Colors.blue,
                       ),
                     ),
                   ],

@@ -171,15 +171,14 @@ class DashboardScreen extends ConsumerWidget {
                           Duration(days: plant.wateringFrequency),
                         );
 
-                        final overdueDays = DateTime.now()
-                            .difference(nextWateringDate)
+                        final daysUntilWatering = nextWateringDate
+                            .difference(DateTime.now())
                             .inDays;
 
                         return PlantCard(
                           plantName: plant.name,
                           lastWateredDate: plant.lastWateredDate,
-                          overdueDays: overdueDays > 0 ? overdueDays : 0,
-
+                          overdueDays: daysUntilWatering,
                           onWater: () async {
                             await ref
                                 .read(plantsProvider.notifier)
